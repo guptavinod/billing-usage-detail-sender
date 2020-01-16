@@ -27,6 +27,11 @@ public class UsageDetailSender {
 		usageDetail.setUserId(this.users[new Random().nextInt(5)]);
 		usageDetail.setDuration(new Random().nextInt(300));
 		usageDetail.setData(new Random().nextInt(700));
+		
+		System.out.println("=============================");
+		System.out.println(usageDetail);
+		System.out.println("=============================");
+		
 		this.source.output().send(MessageBuilder.withPayload(usageDetail).build());
 	}
 }
